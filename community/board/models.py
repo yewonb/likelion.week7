@@ -11,7 +11,7 @@ class Post(models.Model):
 class Comment(models.Model):
   post=models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
   created_at=models.DateField(auto_now_add=True)
-  comment=models.TextField(default="")
+  comment=models.TextField()
 
   def __str__(self):
     return self.comment
